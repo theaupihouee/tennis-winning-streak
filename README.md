@@ -16,6 +16,6 @@ To answer this question, the following steps have been carried out:
 
 ## References 
 
-- [The Match Charting Project: Quick Start Guide (Jeff Sackmann)](https://link-url-here.org](http://www.tennisabstract.com/blog/2015/09/23/the-match-charting-project-quick-start-guide)
+- [The Match Charting Project: Quick Start Guide - Jeff Sackmann](https://link-url-here.org](http://www.tennisabstract.com/blog/2015/09/23/the-match-charting-project-quick-start-guide)
 - [Weighted Elo rating for tennis match predictions](https://www.sciencedirect.com/science/article/abs/pii/S0377221721003234) 
 - [Are differences in ranks good predictors for Grand Slam tennis matches?](https://www.sciencedirect.com/science/article/abs/pii/S0169207009002076) 
