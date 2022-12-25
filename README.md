@@ -2,12 +2,18 @@
 
 ## Project Description 
 
+In 1999, Gasquet beats Nadal in Junior World Championship. 23 years later : 18-0 for Nadal against Gasquet. 
+
 **How unlikely is the 18-0 streak of matches between Rafael Nadal and Richard Gasquet in the ATP circuit ?** 
 
 To answer this question, the following steps have been carried out: 
 1) In-depth analysis of winning streaks between all ATP players since 2000 
 2) Implementation of SRS (Simple Rating System) and ELO models to conduct match simulations and quantify the unlikeliness of that neverending winning streak
 3) Clustering analysis of Top 100 ATP players to compare the performances against R. Nadal of players identified as similar to Gasquet’s playing style 
+
+## Main results 
+
+![Models Accuracy](images/models_accuracy.jpg)
 
 ## Data Sources 
 
