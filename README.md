@@ -15,7 +15,7 @@ To answer this question, the following steps have been carried out:
 
 ## Main results 
 
-- Below is a comparison of the accuracy of the three models that we compared (SRS, ELO and a benchmark) 
+- Below is a comparison of the accuracy of the three models that we studied (SRS, ELO and a benchmark) 
 - For the benchmark: The player with the best ATP ranking is predicted to win. However, no win probabilities inferred 
 - The predictions have been made between 2004 and 2022. Each year, the ratings are computed using the data for the given year and predictions are made for the next year using these ratings and compared to the actual outcomes of ATP matches 
 
