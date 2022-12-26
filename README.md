@@ -40,7 +40,16 @@ To answer this question, the following steps have been carried out:
 - We performed some clustering to find players having a similar style to Gasquet. We used the work made by Johnattan Ontiveros to fetch Gasquet's cluster, which is **"All-Court" (players that are good with all types of shots and in all positions) and completed it by filtering players that were righ-handed with a one-handed backhand**. 
 - We then compared Nadal's performances overall and against the clustered: 
 
-![Cluster Comparison](images/cluster_comparison.jpg) 
+|                                        | Nadal's Win Percentage | 
+| :----:                                 |    :----:              | 
+| Whole Career                           | 83.0                   |
+| Against Players from Gasquet’s Cluster | 91.0                   |
+
+|                                      | Nadal's Max Streak Average | Nadal's Max Streak Median |
+| :----:                               |    :----:                  |          :----:           |
+| vs. All ATP Players                  | 2.69                       | 2                         |
+| vs. Players from Gasquet’s Cluster   | 5.53                       | 5                         |
+| vs. Rest of ATP Players              | 2.53                       | 2                         |
 
 - We notice better performances against players of the cluster than overall (both for win percentage and max streak average) 
 - A further possible explanation to that 18-0 streak is thus that **the "skill" part can be explained by a difference in style between Gasquet and Nadal that favors the latter**
