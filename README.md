@@ -13,7 +13,19 @@ To answer this question, the following steps have been carried out:
 
 ## Main results 
 
+![Max Winning Streaks Comparison](images/max_winning_streaks_comparison.jpg)
+
+![Updating SRS Ratings](images/srs_model.jpg)
+
+![Elo Win Probability](images/elo_win_proba.jpg)
+
+![Updating Elo Ratings](images/updating_elo_ratings.jpg)
+
 ![Models Accuracy](images/models_accuracy.jpg)
+
+![Monte-Carlo Streaks Distribution](images/streak_distribution.jpg) 
+
+![Cluster Comparison](images/cluster_comparison.jpg) 
 
 ## Data Sources 
 
