@@ -21,7 +21,7 @@ To answer this question, the following steps have been carried out:
 
 ![Models Accuracy](images/models_accuracy.jpg)
 
-- We notice a poor accuracy for the SRS model (close to a random predictor). This is mainly because of a lack of data : there are very few charted matches containing point-by-point data (manual process). Even when trying to extrapolate the number of points won with linear regression using the match final score was not conclusive. In the end, there was not enough consistent data to efficiently train the model 
+- We notice a poor accuracy for the SRS model (close to a random predictor). This is mainly because of a lack of data : there are very few charted matches containing point-by-point data (manual process). Even trying to extrapolate the number of points won with linear regression using the match final score was not conclusive. In the end, there was not enough consistent data to efficiently train the model 
 - The ELO model has a good accuracy, quite similar to the benchmark, altough slightly better. The real advantage of the ELO model compared to the benchmark is that we can infer win probabilities for each match, which will be crucial when conducting Monte Carlo simulations 
 
 - Below is the distribution of winning streaks obtained by running 90,000 Monte Carlo simulations using the ELO model 
