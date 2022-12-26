@@ -17,7 +17,7 @@ To answer this question, the following steps have been carried out:
 
 ![Elo Win Probability](images/elo_win_proba.jpg)
 
-![Updating Elo Ratings](images/updating_elo_ratings.jpg)
+![Updating Elo Ratings](images/elo_model.jpg)
 
 ![Models Accuracy](images/models_accuracy.jpg)
 
