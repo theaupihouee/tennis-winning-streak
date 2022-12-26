@@ -15,7 +15,16 @@ To answer this question, the following steps have been carried out:
 
 ### SRS and ELO Models
 
+- The Simple Rating System (SRS) is a rating that evaluates the strength of a player compared to the average strength of players. The average SRS is set to 0 and players above 0 have a better rating than an average player and those with a negative rating perform worse than an average player 
+- Each player has a server rating (S Rating) and a receiver rating (R Rating). All ratings are initialized randomly. 
+- The models uses serve won points per match for each player and for every ATP matches  
+
 ![Updating SRS Ratings](images/srs_model.jpg)
+
+- In the above formula, SWP_avg is the average service win percentage. Once the above probability has been computed, the probability of winning the match is calculated with probability trees to evaluate the odds of winning a game and a set 
+- The major challenge is regarding data as there are few charted matches (detailed point-by-point data is collected manually). To solve that, linear regression has been used to extrapolate the number of points won using the match final scores. However, the results are not conclusive, as seen below 
+
+- Regarding the ELO model, the  
 
 ![Elo Win Probability](images/elo_win_p.jpg)
 
