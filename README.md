@@ -13,6 +13,8 @@ To answer this question, the following steps have been carried out:
 
 ## Main results 
 
+### SRS and ELO Models
+
 ![Updating SRS Ratings](images/srs_model.jpg)
 
 ![Elo Win Probability](images/elo_win_p.jpg)
