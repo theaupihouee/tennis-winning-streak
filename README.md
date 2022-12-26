@@ -11,30 +11,38 @@ To answer this question, the following steps have been carried out:
 2) Implementation of SRS (Simple Rating System) and ELO models to conduct match simulations and quantify the unlikeliness of that neverending winning streak
 3) Clustering analysis of Top 100 ATP players to compare the performances against R. Nadal of players identified as similar to Gasquet’s playing style 
 
+*Note : All streaks described below are streaks between two players. We are not talking about winning matches in a row against different opponents* 
+
 ## Main results 
 
-### SRS and ELO Models
-
-- The Simple Rating System (SRS) is a rating that evaluates the strength of a player compared to the average strength of players. The average SRS is set to 0 and players above 0 have a better rating than an average player and those with a negative rating perform worse than an average player 
-- Each player has a server rating (S Rating) and a receiver rating (R Rating). All ratings are initialized randomly. 
-- The models uses serve won points per match for each player and for every ATP matches  
-
-![Updating SRS Ratings](images/srs_model.jpg)
-
-- In the above formula, SWP_avg is the average service win percentage. Once the above probability has been computed, the probability of winning the match is calculated with probability trees to evaluate the odds of winning a game and a set 
-- The major challenge is regarding data as there are few charted matches (detailed point-by-point data is collected manually). To solve that, linear regression has been used to extrapolate the number of points won using the match final scores. However, the results are not conclusive, as seen below 
-
-- Regarding the ELO model, the  
-
-![Elo Win Probability](images/elo_win_p.jpg)
-
-![Updating Elo Ratings](images/elo_model.jpg)
+- Below is a comparison of the accuracy of the three models that we compared (SRS, ELO and a benchmark) 
+- For the benchmark: The player with the best ATP ranking is predicted to win. However, no win probabilities inferred 
+- The predictions have been made between 2004 and 2022. Each year, the ratings are computed using the data for the given year and predictions are made for the next year using these ratings and compared to the actual outcomes of ATP matches 
 
 ![Models Accuracy](images/models_accuracy.jpg)
 
+- We notice a poor accuracy for the SRS model (close to a random predictor). This is mainly because of a lack of data : there are very few charted matches containing point-by-point data (manual process). Even when trying to extrapolate the number of points won with linear regression using the match final score was not conclusive. In the end, there was not enough consistent data to efficiently train the model 
+- The ELO model has a good accuracy, quite similar to the benchmark, altough slightly better. The real advantage of the ELO model compared to the benchmark is that we can infer win probabilities for each match, which will be crucial when conducting Monte Carlo simulations 
+
+- Below is the distribution of winning streaks obtained by running 90,000 Monte Carlo simulations using the ELO model 
+- Simulations of confrontations between 10 players (total of 90 combinations), and for each combinations, we run 1,000 simulations. The 10 players contain Nadal and Gasquet, as well as other players that had the same career length as the duo. - We have replicated the same configuration as the real events : frequence_matches = {2004:1, 2005:2, 2006:0, 2007:1, 2008:2, 2009:1, 2010:0, 2011:3, 2012:0, 2013:2, 2014:1, 2015:1, 2016:0, 2017:1, 2018:1, 2019:0, 2020:0, 2021:1, 2022:1} That means that in 2004, Nadal and Gasquet played their first match, in 2005 they played two matches, etc. For each of these matches, we used the ELO ratings of the players at that time 
+- For each simulation, the outcome was a list of 0 or 1 with a length of 18 (for the 18 matches played in their career) : 1 meant that Nadal won the match. Each position in the list has a specific probability of being 1 or 0. We were thus particularly interested in the case where the list was filled with ones => streak of 18 wins. 
+
 ![Monte-Carlo Streaks Distribution](images/streak_distribution.jpg) 
 
+- To obtain the graph above, we made the null hypothesis of no streakiness : all ordering of confrontations between two players are equally likely. The outcome of a match has no impact over the outcome of the next one 
+- We obtain a percentage of 1.16% where the maximum streak is 18. This corresponds to a p-value (probability of observing such event under the null hypothesis) 
+- We thus reject the null hypothesis (p-value < 0.05) which means that there is some streakiness. 
+- Overall, there is of course some luck involved in this extraordinary event, but it required a lot of skill from Nadal to actually make it possible 
+
+- Let's go further in the analysis by analyzing how skills may have impacted this event 
+- We performed some clustering to find players having a similar style to Gasquet. We used the work made by ... to fetch Gasquet's cluster, which is "All-Court" (players that are good with all types of shots and in all positions) and completed it by filtering players that were righ-handed with a one-handed backhanded. 
+- We then compared Nadal's performances overall and against the clustered players : 
+
 ![Cluster Comparison](images/cluster_comparison.jpg) 
+
+- We notice better performances against players of the cluster than overall (both for win percentage and max streak average) 
+- A further possible explanation to that 18-0 streak is thus that the "skill" part can be explained by a difference in style between Gasquet and Nadal that favors the latter
 
 ## Data Sources 
 
