@@ -13,8 +13,6 @@ To answer this question, the following steps have been carried out:
 
 ## Main results 
 
-![Max Winning Streaks Comparison](images/max_winning_streaks_comparison.jpg)
-
 ![Updating SRS Ratings](images/srs_model.jpg)
 
 ![Elo Win Probability](images/elo_win_proba.jpg)
